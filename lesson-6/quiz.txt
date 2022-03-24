@@ -1,0 +1,10 @@
+Chapter 6: Next Steps
+
+----------------------------------------------------------------------------------------------------
+Q1.What actions are available to you via the Aggregation Builder in the Atlas Data Explorer?
+
+ANS:
+A preview of the data in the pipeline at each selected stage.
+Export pipeline to a programming language.
+Syntax for each selected aggregation stage.
+------------------------------------------------------------------------------------------------------------------

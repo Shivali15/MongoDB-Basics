@@ -1,0 +1,7 @@
+Chapter 2: Importing, Exporting, and Querying Data
+---------------------------------------------------------------------------------------------------------------
+Q1.In the sample_training.trips collection a person with birth year 1961 took
+ a trip that started at "Howard St & Centre St". What was the end station name for that trip?
+
+ANS:   "South End Ave & Liberty St"
+-------------------------------------------------------------------------------------------------------------

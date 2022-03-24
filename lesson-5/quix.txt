@@ -1,0 +1,52 @@
+Chapter 5: Indexing and Aggregation Pipeline
+---------------------------------------------------------------------------------------------------------
+Q1. What are the differences between using aggregate() and find()?
+
+ANS:
+2.aggregate() allows us to compute and reshape data in the cursor.
+3.aggregate() can do what find() can and more.
+---------------------------------------------------------------------------------------------------------------------
+
+
+Q2.Which of the following commands will return the name and
+ founding year for the 5 oldest companies in the sample_training.companies collection?
+
+ ANS:
+ 3.db.companies.find({ "founded_year": { "$ne": null }},
+                  { "name": 1, "founded_year": 1 }
+                 ).sort({ "founded_year": 1 }).limit(5)
+
+
+4.db.companies.find({ "founded_year": { "$ne": null }},
+                  { "name": 1, "founded_year": 1 }
+                 ).limit(5).sort({ "founded_year": 1 })
+------------------------------------------------------------------------------------------------------------------
+
+Q3.In what year was the youngest bike rider from the sample_training.trips collection born?
+
+ANS:1999
+---------------------------------------------------------------------------------------------------------------------------------
+
+Q4.Jameela often queries the sample_training.routes collection by the src_airport
+ field like this:
+ db.routes.find({ "src_airport": "MUC" }).pretty()
+
+ANS:
+1.db.routes.createIndex({ "src_airport": -1 })
+--------------------------------------------------------------------------------------------------------------------------------
+Q5.What is data modeling?
+
+ANS:
+2. a way to organize fields in a document to support your application performance and querying capabilities
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Q6.How does the upsert option work?
+
+ANS:
+1. When upsert is set to true and the query predicate returns an empty cursor, the update operation 
+creates a new document using the directive from the query predicate and the update predicate.
+2. When upsert is set to false and the query predicate returns an empty cursor then there will
+ be no updated documents as a result of this operation.
+3. By default upsert is set to false.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------

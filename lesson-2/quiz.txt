@@ -1,0 +1,47 @@
+Chapter 2: Importing, Exporting, and Querying Data
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Q1.Which of the following documents is correct JSON?
+
+ANS:
+{"name" : "Devi", "age": 19, "major": "Computer Science"}
+---------------------------------------------------------------------------------------------------------------------
+
+Q2.Write BSON or JSON in the numbered blanks in the following sentences to make them true:
+
+ANS:
+MongoDB stores data in 
+BSON
+, and you can then view it in 
+JSON
+.
+
+BSON
+ is faster to parse and lighter to store than 
+JSON
+.
+
+JSON
+ supports fewer data types than 
+BSON
+--------------------------------------------------------------------------------------------------------
+
+Q3.Which of the following commands will add a collection that is stored in animals.json
+ to an Atlas cluster?
+
+ ANS:  mongoimport
+-------------------------------------------------------------------------------------------------------------
+
+Q4.What does it do in the mongo shell?
+
+ANS:
+Iterates through the cursor results
+-----------------------------------------------------------------------------------------------------------
+
+
+Q5.Which of the following statements are true about the mongo shell?
+
+ANS:
+It allows you to interact with your MongoDB instance without using a Graphical User Interface
+It is a fully functioning JavaScript interpreter
+-------------------------------------------------------------------------------------------------------------

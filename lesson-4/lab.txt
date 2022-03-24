@@ -1,0 +1,85 @@
+Chapter 4: Advanced CRUD Operations
+--------------------------------------------------------------------------------------------------------------------------------
+Q1.How many documents in the sample_training.zips collection have fewer than 1000
+ people listed in the pop field?
+
+ANS:8065
+
+----------------------------------------------------------------------------------------------------------------------------
+Q2.What is the difference between the number of people born in 1998 and the 
+number of people born after 1998 in the sample_training.trips collection?
+
+ANS:6
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Q3.Using the sample_training.routes collection find out which of the following
+ statements will return all routes that have at least one stop in them?
+
+ANS:
+3. db.routes.find({ "stops": { "$ne": 0 }}).pretty()
+4. db.routes.find({ "stops": { "$gt": 0 }}).pretty()
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q4.To complete this exercise connect to your Atlas cluster using the in-browser IDE space at the end of this chapter.
+Before solving this exercise, make sure to undo some of the changes that we made to the zips collection earlier in the 
+course by running the following command:
+db.zips.updateMany({ "city": "HUDSON" }, { "$inc": { "pop": -10 } })
+How many zips in the sample_training.zips dataset are neither over-populated nor under-populated?
+In this case, we consider population of more than 1,000,000 to be over- populated and less than 5,000 to be under-populated.
+Copy/paste the exact numeric value (without double quotes) of the result that you get into the response field.
+
+ANS:11193
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q5.To complete this exercise connect to your Atlas cluster using the in-browser IDE space at the end of this chapter.
+How many companies in the sample_training.companies dataset were
+either founded in 2004
+[and] either have the social category_code [or] web category_code,
+[or] were founded in the month of October
+[and] also either have the social category_code [or] web category_code?
+Copy/paste the exact numeric value (without double quotes) of the result that you get into the response field.
+
+ANS:149
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Q6.To complete this exercise connect to your Atlas cluster using the in-browser IDE space at the end of this chapter.
+How many companies in the sample_training.companies collection have the same permalink as their twitter_username?
+
+ANS:1299
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q7.To complete this exercise connect to your Atlas cluster using the in-browser IDE space at the end of this chapter.
+What is the name of the listing in the sample_airbnb.listingsAndReviews dataset that accommodates more than 6 people and has exactly 50 reviews?
+Copy/Paste the value of the "name" field into the response field without quotation marks.
+
+ANS:Sunset Beach Lodge Retreat
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q8.To complete this exercise connect to your Atlas cluster using the in-browser IDE space at the end of this chapter.
+Using the sample_airbnb.listingsAndReviews collection find out how many documents have the
+ "property_type" "House", and include "Changing table" as one of the "amenities"?
+Enter the number of results to the response field.
+
+ANS:11
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q9.To complete this exercise connect to your Atlas cluster using the in-browser IDE space at the end of this chapter.
+How many companies in the sample_training.companies collection have offices in the city of Seattle?
+Copy/paste your answer to the response field.
+
+ANS:117
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q10.To complete this exercise connect to your Atlas cluster using the in-browser IDE space at the end of this chapter.
+How many trips in the sample_training.trips collection started at stations that are to the west of the -74 longitude coordinate?
+Longitude decreases in value as you move west.
+Note: We always list the longitude first and then latitude in the coordinate pairs; i.e.
+<field_name>: [ <longitude>, <latitude> ]
+
+ANS:1928
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q11.To complete this exercise connect to your Atlas cluster using the in-browser IDE space at the end of this chapter.
+How many inspections from the sample_training.inspections collection were conducted in the city of NEW YORK?
+
+ANS: 18279
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
